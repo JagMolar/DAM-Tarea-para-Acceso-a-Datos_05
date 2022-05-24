@@ -58,7 +58,7 @@ CREATE OR REPLACE TYPE BODY venta AS
         linea   lineaventa;
         product producto;
     BEGIN
-        FOR i IN i..lineas.count LOOP
+        FOR i IN 1..lineas.count LOOP
             linea := lineas(i);
             SELECT
                 deref(linea.producto_t)
